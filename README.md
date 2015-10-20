@@ -23,4 +23,4 @@ heroku ps:scale web=1
 
 ### Contributing
 
-> Do it.
+Contributions welcome. Submit a PR with some notes about the implementation

@@ -3,16 +3,32 @@ var RegisterForm = React.createClass({
 	handleSubmit: function(e) {
 		e.preventDefault();
 
-		var author = this.refs.email.value.trim();
-		var text = this.refs.password.value.trim();
+		var _email = this.refs.email.value.trim();
+		var _password = this.refs.password.value.trim();
 
 		// form validation goes here
-		if (!text || !author) {
+		if (!_email || !_password) {
 		  return;
 		}
 
-		console.log('form submitted!');
-		// TODO: send request to the server
+		// send request to the server
+		$.ajax({
+			type: "POST",
+			dataType: 'json',
+			url: '/api/users',
+			data: {
+				email: _email,
+				password: _password
+			},
+			success: function(data) {
+				console.log('Success ', data);
+			}.bind(this),
+			error: function(xhr, status, err) {
+				console.error(this.props.url, status, err.toString());
+			}.bind(this)
+		});
+
+		// reset form
 		this.refs.email.value = '';
 		this.refs.password.value = '';
 		return;

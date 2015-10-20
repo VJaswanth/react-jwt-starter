@@ -21,3 +21,6 @@ git push heroku master
 heroku ps:scale web=1
 ```
 
+### Contributing
+
+> Do it. Submit a PR

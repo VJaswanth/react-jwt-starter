@@ -21,7 +21,12 @@ var RegisterForm = React.createClass({
 				password: _password
 			},
 			success: function(data) {
-				console.log('Success ', data);
+				console.log('data');
+				var _token = data.token;
+				var _decoded = jwt_decode(_token);
+
+				// decoded data from our JSON web token
+				console.log(_decoded);
 			}.bind(this),
 			error: function(xhr, status, err) {
 				console.error(this.props.url, status, err.toString());

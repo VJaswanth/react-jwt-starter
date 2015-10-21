@@ -25,5 +25,5 @@ heroku ps:scale web=1
 
 Contributions welcome.
 
-- Need to handle response for persistent user login (perhaps need flux or some extra jQuery)
+- Need to handle response for persistent user login (perhaps need flux or some extra custom js)
 - Also can package everything up with webpack/browserify for commonjs syntax

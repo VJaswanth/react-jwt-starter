@@ -1,7 +1,7 @@
 React Authentication Starter
 =====
 
-> A fullstack solution to your authentication needs. Built with React, Express and MongoDB
+> Uses react, node and jwt to send a receive a user registration request
 
 #### Getting started
 ```
@@ -23,4 +23,7 @@ heroku ps:scale web=1
 
 ### Contributing
 
-Contributions welcome. Submit a PR with some notes about the implementation
+Contributions welcome.
+
+- Need to handle response for persistent user login (perhaps need flux or some extra jQuery)
+- Also can package everything up with webpack/browserify for commonjs syntax
